@@ -4,6 +4,14 @@
 1. Install the .NET Core SDK [v 2.1](https://www.microsoft.com/net/download/) or later
 2. Update Visual Studio to [v 15.8](https://blogs.msdn.microsoft.com/visualstudio/2018/08/14/visual-studio-2017-version-15-8/) or later
 
+> Note: If you get an error running `dotnet ef` commands, add the following to the Data project's csproj file.  See this [issue](https://github.com/aspnet/EntityFrameworkCore/issues/10298) for more info.
+
+```xml
+<PropertyGroup>
+  <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+</PropertyGroup>
+```
+
 ## Steps
 1. Create an EF Core Class Library
 2. Set the framework version to v2.1 or higher
